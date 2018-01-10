@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainWindowController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <VBox fx:id="vBoxSteuerung" alignment="TOP_CENTER" prefHeight="5000.0" spacing="10.0">
+               <children>
+                  <Button fx:id="buttonAn" minWidth="100.0" mnemonicParsing="false" onAction="#actionButtonAn" text="An" />
+                  <Button fx:id="buttonAus" minWidth="100.0" mnemonicParsing="false" onAction="#actionButtonAus" text="Aus" />
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <VBox alignment="CENTER" minHeight="100.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ComboBox fx:id="comboBoxPortList" prefWidth="250.0" />
+                        <Button fx:id="buttonRefreshPortList" mnemonicParsing="false" onAction="#actionButtonRefreshPortList" text="Refresh Port-Liste" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" spacing="10.0">
+                     <children>
+                        <HBox fx:id="hBoxPunkt" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" />
+                        <Button fx:id="buttonConnect" minWidth="100.0" mnemonicParsing="false" onAction="#actionButtonConnect" text="Connect" />
+                        <Button fx:id="buttonDisconnect" minWidth="100.0" mnemonicParsing="false" onAction="#actionButtonDisconnect" text="Disconnect" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
